@@ -23,6 +23,33 @@
 
     <h2>These items are not in any particular order:</h2>
 
+    <!-- Household List -->
+    <div id="list-household" class="wishlist-section" style="display: none;">
+      <div class="wishlist-grid">
+        {% for item in site.data.household %}
+          <div class="card">
+            {% if item.image != "" and item.image != nil %}
+              <div class="card-image">
+                <img src="{{ item.image }}" alt="{{ item.title }}">
+              </div>
+            {% endif %}
+
+            <div class="card-body">
+              <h2>{{ item.title }}</h2>
+
+              {% if item.notes != "" and item.notes != nil %}
+                <p class="notes">{{ item.notes }}</p>
+              {% endif %}
+
+              {% if item.url != "" and item.url != nil %}
+                <a class="card-link" href="{{ item.url }}" target="_blank" rel="noopener">View item &rarr;</a>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
     <!-- James's List -->
     <div id="list-james" class="wishlist-section" style="display: none;">
       <div class="wishlist-grid">
@@ -108,33 +135,6 @@
     <div id="list-mabel" class="wishlist-section" style="display: none;">
       <div class="wishlist-grid">
         {% for item in site.data.mabel %}
-          <div class="card">
-            {% if item.image != "" and item.image != nil %}
-              <div class="card-image">
-                <img src="{{ item.image }}" alt="{{ item.title }}">
-              </div>
-            {% endif %}
-
-            <div class="card-body">
-              <h2>{{ item.title }}</h2>
-
-              {% if item.notes != "" and item.notes != nil %}
-                <p class="notes">{{ item.notes }}</p>
-              {% endif %}
-
-              {% if item.url != "" and item.url != nil %}
-                <a class="card-link" href="{{ item.url }}" target="_blank" rel="noopener">View item &rarr;</a>
-              {% endif %}
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
-
-    <!-- Household List -->
-    <div id="list-household" class="wishlist-section" style="display: none;">
-      <div class="wishlist-grid">
-        {% for item in site.data.household %}
           <div class="card">
             {% if item.image != "" and item.image != nil %}
               <div class="card-image">
