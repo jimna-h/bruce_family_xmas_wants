@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,14 +23,29 @@
 
     <h2>These items are not in any particular order:</h2>
 
-    <!-- Dynamic Wishlist Containers using Jekyll Data Loops -->
-    {% assign current_tab = page.url | split: '/' %}
-    
     <!-- James's List -->
     <div id="list-james" class="wishlist-section" style="display: none;">
       <div class="wishlist-grid">
         {% for item in site.data.james %}
-          {% include card.html item=item %}
+          <div class="card">
+            {% if item.image != "" and item.image != nil %}
+              <div class="card-image">
+                <img src="{{ item.image }}" alt="{{ item.title }}">
+              </div>
+            {% endif %}
+
+            <div class="card-body">
+              <h2>{{ item.title }}</h2>
+
+              {% if item.notes != "" and item.notes != nil %}
+                <p class="notes">{{ item.notes }}</p>
+              {% endif %}
+
+              {% if item.url != "" and item.url != nil %}
+                <a class="card-link" href="{{ item.url }}" target="_blank" rel="noopener">View item &rarr;</a>
+              {% endif %}
+            </div>
+          </div>
         {% endfor %}
       </div>
     </div>
@@ -37,7 +54,25 @@
     <div id="list-megan" class="wishlist-section" style="display: none;">
       <div class="wishlist-grid">
         {% for item in site.data.megan %}
-          {% include card.html item=item %}
+          <div class="card">
+            {% if item.image != "" and item.image != nil %}
+              <div class="card-image">
+                <img src="{{ item.image }}" alt="{{ item.title }}">
+              </div>
+            {% endif %}
+
+            <div class="card-body">
+              <h2>{{ item.title }}</h2>
+
+              {% if item.notes != "" and item.notes != nil %}
+                <p class="notes">{{ item.notes }}</p>
+              {% endif %}
+
+              {% if item.url != "" and item.url != nil %}
+                <a class="card-link" href="{{ item.url }}" target="_blank" rel="noopener">View item &rarr;</a>
+              {% endif %}
+            </div>
+          </div>
         {% endfor %}
       </div>
     </div>
@@ -46,7 +81,25 @@
     <div id="list-jemma" class="wishlist-section" style="display: none;">
       <div class="wishlist-grid">
         {% for item in site.data.jemma %}
-          {% include card.html item=item %}
+          <div class="card">
+            {% if item.image != "" and item.image != nil %}
+              <div class="card-image">
+                <img src="{{ item.image }}" alt="{{ item.title }}">
+              </div>
+            {% endif %}
+
+            <div class="card-body">
+              <h2>{{ item.title }}</h2>
+
+              {% if item.notes != "" and item.notes != nil %}
+                <p class="notes">{{ item.notes }}</p>
+              {% endif %}
+
+              {% if item.url != "" and item.url != nil %}
+                <a class="card-link" href="{{ item.url }}" target="_blank" rel="noopener">View item &rarr;</a>
+              {% endif %}
+            </div>
+          </div>
         {% endfor %}
       </div>
     </div>
@@ -55,7 +108,25 @@
     <div id="list-mabel" class="wishlist-section" style="display: none;">
       <div class="wishlist-grid">
         {% for item in site.data.mabel %}
-          {% include card.html item=item %}
+          <div class="card">
+            {% if item.image != "" and item.image != nil %}
+              <div class="card-image">
+                <img src="{{ item.image }}" alt="{{ item.title }}">
+              </div>
+            {% endif %}
+
+            <div class="card-body">
+              <h2>{{ item.title }}</h2>
+
+              {% if item.notes != "" and item.notes != nil %}
+                <p class="notes">{{ item.notes }}</p>
+              {% endif %}
+
+              {% if item.url != "" and item.url != nil %}
+                <a class="card-link" href="{{ item.url }}" target="_blank" rel="noopener">View item &rarr;</a>
+              {% endif %}
+            </div>
+          </div>
         {% endfor %}
       </div>
     </div>
@@ -64,28 +135,43 @@
     <div id="list-household" class="wishlist-section" style="display: none;">
       <div class="wishlist-grid">
         {% for item in site.data.household %}
-          {% include card.html item=item %}
+          <div class="card">
+            {% if item.image != "" and item.image != nil %}
+              <div class="card-image">
+                <img src="{{ item.image }}" alt="{{ item.title }}">
+              </div>
+            {% endif %}
+
+            <div class="card-body">
+              <h2>{{ item.title }}</h2>
+
+              {% if item.notes != "" and item.notes != nil %}
+                <p class="notes">{{ item.notes }}</p>
+              {% endif %}
+
+              {% if item.url != "" and item.url != nil %}
+                <a class="card-link" href="{{ item.url }}" target="_blank" rel="noopener">View item &rarr;</a>
+              {% endif %}
+            </div>
+          </div>
         {% endfor %}
       </div>
     </div>
 
   </main>
 
-  <!-- Client-side script to handle tab switching cleanly -->
   <script>
     function getTabFromUrl() {
       const params = new URLSearchParams(window.location.search);
-      return params.get('tab') || 'household'; // Default to Household if no tab specified
+      return params.get('tab') || 'james';
     }
 
     function switchTab() {
       const activeTab = getTabFromUrl();
       
-      // Hide all lists and deactivate buttons
       document.querySelectorAll('.wishlist-section').forEach(el => el.style.display = 'none');
       document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
 
-      // Show target list and activate button
       const targetList = document.getElementById(`list-${activeTab}`);
       const targetBtn = document.querySelector(`[data-tab="${activeTab}"]`);
 
@@ -93,7 +179,6 @@
       if (targetBtn) targetBtn.classList.add('active');
     }
 
-    // Run on load
     window.addEventListener('DOMContentLoaded', switchTab);
   </script>
 </body>
