@@ -4,10 +4,10 @@
 #   notes: ""
 
 
-# - title: ""
-#   url: ""
-#   image: "" 
-#   notes: ""
+- title: "this is just a test"
+  url: ""
+  image: "./assets/test.webp" 
+  notes: ""
 
 # - title: ""
 #   url: ""
