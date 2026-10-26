@@ -64,7 +64,7 @@
   image: "https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/51ldc-4q6iL._SL1100_.jpg"
   notes: "This is to help cutting nice Magic card proxies easier"
 
-- title: "Untold Storie: Elspeth"
+- title: "Untold Stories: Elspeth"
   url: "https://www.amazon.com/Magic-Gathering-Stories-Elspeth-Dan-Watters/dp/1506749763/ref=sr_1_1?adgrpid=1333710201566867&gb=2&hvadid=83357181134497&hvbmt=be&hvdev=c&hvexpln=0&hvlocphy=66584&hvnetw=o&hvocijid=6305250898229937656--&hvqmt=e&hvtargid=kwd-83358140688474%3Aloc-190&hydadcr=22562_13494426_8387&mcid=ce86fa7d3b443e4a8693d61567ef99ac&sr=8-1"
   image: "https://m.media-amazon.com/images/I/51gd7A1AvwL._SY445_SX342_FMwebp_.jpg"
   notes: ""
@@ -72,7 +72,7 @@
 - title: "Untold Stories: Jace"
   url: "https://www.amazon.com/Magic-Gathering-Stories-Jace-Michael-Conrad/dp/1506749348/ref=sr_1_1?adgrpid=1334809713429460&gb=2&hvadid=81226569356211&hvbmt=be&hvdev=c&hvexpln=0&hvlocphy=66584&hvnetw=o&hvocijid=3834960759908457648--&hvqmt=e&hvtargid=kwd-81226834226058%3Aloc-190&hydadcr=22538_13494488_8218&mcid=97936b1401d1367f8b2dde0b6ddb522b&sr=8-1"
   image: "https://m.media-amazon.com/images/I/41j2u0qeo+L._SY445_SX342_FMwebp_.jpg" 
-  notes: "Released Jan 12, 2027"
+  notes: "Releases Jan 12, 2027"
 
 - title: "My curretly proxied MTG cards"
   url: "https://jimna-h.github.io/archidekt-snapshot/#cards?proxied=only&layout=grid&sort=best"
