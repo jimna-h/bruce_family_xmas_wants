@@ -1,41 +1,100 @@
----
----
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Christmas Wishlist</title>
+  <title>Family Christmas Wishlist</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="container">
-    <h1>Christmas Wishlist</h1>
+    <h1>🎄 Family Christmas Wishlist</h1>
+
+    <!-- Tab Navigation Bar -->
+    <nav class="wishlist-tabs">
+      <a href="?tab=james" class="tab-btn" data-tab="james">James</a>
+      <a href="?tab=megan" class="tab-btn" data-tab="megan">Megan</a>
+      <a href="?tab=jemma" class="tab-btn" data-tab="jemma">Jemma</a>
+      <a href="?tab=mabel" class="tab-btn" data-tab="mabel">Mabel</a>
+      <a href="?tab=household" class="tab-btn" data-tab="household">Household</a>
+    </nav>
+
     <h2>These items are not in any particular order:</h2>
 
-    <div class="wishlist-grid">
-      {% for item in site.data.wishlist %}
-        <div class="card">
-          {% if item.image != "" and item.image != nil %}
-            <div class="card-image">
-              <img src="{{ item.image }}" alt="{{ item.title }}">
-            </div>
-          {% endif %}
-
-          <div class="card-body">
-            <h2>{{ item.title }}</h2>
-
-            {% if item.notes != "" and item.notes != nil %}
-              <p class="notes">{{ item.notes }}</p>
-            {% endif %}
-
-            {% if item.url != "" and item.url != nil %}
-              <a class="card-link" href="{{ item.url }}" target="_blank" rel="noopener">View item &rarr;</a>
-            {% endif %}
-          </div>
-        </div>
-      {% endfor %}
+    <!-- Dynamic Wishlist Containers using Jekyll Data Loops -->
+    {% assign current_tab = page.url | split: '/' %}
+    
+    <!-- James's List -->
+    <div id="list-james" class="wishlist-section" style="display: none;">
+      <div class="wishlist-grid">
+        {% for item in site.data.james %}
+          {% include card.html item=item %}
+        {% endfor %}
+      </div>
     </div>
+
+    <!-- Megan's List -->
+    <div id="list-megan" class="wishlist-section" style="display: none;">
+      <div class="wishlist-grid">
+        {% for item in site.data.megan %}
+          {% include card.html item=item %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Jemma's List -->
+    <div id="list-jemma" class="wishlist-section" style="display: none;">
+      <div class="wishlist-grid">
+        {% for item in site.data.jemma %}
+          {% include card.html item=item %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Mabel's List -->
+    <div id="list-mabel" class="wishlist-section" style="display: none;">
+      <div class="wishlist-grid">
+        {% for item in site.data.mabel %}
+          {% include card.html item=item %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Household List -->
+    <div id="list-household" class="wishlist-section" style="display: none;">
+      <div class="wishlist-grid">
+        {% for item in site.data.household %}
+          {% include card.html item=item %}
+        {% endfor %}
+      </div>
+    </div>
+
   </main>
+
+  <!-- Client-side script to handle tab switching cleanly -->
+  <script>
+    function getTabFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('tab') || 'household'; // Default to Household if no tab specified
+    }
+
+    function switchTab() {
+      const activeTab = getTabFromUrl();
+      
+      // Hide all lists and deactivate buttons
+      document.querySelectorAll('.wishlist-section').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+
+      // Show target list and activate button
+      const targetList = document.getElementById(`list-${activeTab}`);
+      const targetBtn = document.querySelector(`[data-tab="${activeTab}"]`);
+
+      if (targetList) targetList.style.display = 'block';
+      if (targetBtn) targetBtn.classList.add('active');
+    }
+
+    // Run on load
+    window.addEventListener('DOMContentLoaded', switchTab);
+  </script>
 </body>
 </html>
