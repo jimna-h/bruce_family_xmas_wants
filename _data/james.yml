@@ -24,10 +24,10 @@
   image: "https://pops.today/images/POP_MOVIES/Movies+580_500x500.webp"
   notes: "Out of box (OOB) is perfectly fine"
 
-- title: "Funko Pop: Westley (Masked) (Chase)"
-  url: "https://pops.today/movies/579-westley-masked-chase-the-princess-bride"
-  image: "https://pops.today/images/POP_MOVIES/Movies+579+%28Masked%29_500x500.webp"
-  notes: "Out of box (OOB) is perfectly fine"
+# - title: "Funko Pop: Westley (Masked) (Chase)"
+#   url: "https://pops.today/movies/579-westley-masked-chase-the-princess-bride"
+#   image: "https://pops.today/images/POP_MOVIES/Movies+579+%28Masked%29_500x500.webp"
+#   notes: "Out of box (OOB) is perfectly fine"
 
 - title: "Amiibo: Piranha Plant"
   url: "https://amiibo.life/amiibo/super-smash-bros/piranha-plant"
