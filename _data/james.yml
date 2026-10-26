@@ -76,8 +76,8 @@
 
 - title: "My curretly proxied MTG cards"
   url: "https://jimna-h.github.io/archidekt-snapshot/#cards?proxied=only&layout=grid&sort=best"
-  image: "https://static.wikia.nocookie.net/mtgsalvation_gamepedia/images/f/f8/Magic_card_back.jpg/revision/latest?cb=20140813141013" 
-  notes: "This site will automaticaly update daily"
+  image: "https://files.mtg.wiki/thumb/Magic_card_back.jpg/375px-Magic_card_back.jpg" 
+  notes: "This site will automaticaly update daily, cards can be purchased somewhere like tcgplayer.com, or my venmo wallet is always open :D"
 
 - title: "Lumra #0342 FOIL"
   url: "https://www.tcgplayer.com/product/541392?page=1&sharedid=&irpid=4931599&afsrc=1&Language=English&Printing=Foil"
