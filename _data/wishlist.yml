@@ -8,7 +8,6 @@
   url: "https://pops.today/movies/199-french-taunter-monty-python-and-the-holy-grail"
   image: "https://pops.today/images/POP_MOVIES/Movies+199_500x500.webp"
   notes: "Out of box (OOB) is perfectly fine"
-  
 
 - title: "Funko Pop: Monty Python King Arthur"
   url: "https://pops.today/movies/197-king-arthur-monty-python-and-the-holy-grail"
@@ -77,7 +76,7 @@
 
 - title: "My curretly proxied MTG cards"
   url: "https://jimna-h.github.io/archidekt-snapshot/#cards?proxied=only&layout=grid&sort=best"
-  image: "" 
+  image: "https://static.wikia.nocookie.net/mtgsalvation_gamepedia/images/f/f8/Magic_card_back.jpg/revision/latest?cb=20140813141013" 
   notes: "This site will automaticaly update daily"
 
 - title: "Lumra #0342 FOIL"
@@ -103,12 +102,37 @@
 - title: "Dress socks"
   url: ""
   image: "" 
-  notes: "Generally thin, variety of colors"
+  notes: "Generally thin, variety of colors... basically I just want to be able to roughly match my socks to my ties :)"
 
 - title: "Everyday socks"
   url: "https://www.amazon.com/adidas-Cushioning-Breathable-Moisture-Wicking-Reinforced/dp/B01EMQVVG4/ref=sr_1_1?sr=8-1"
   image: "https://m.media-amazon.com/images/I/91M+CLr80rL._AC_SX679_.jpg" 
-  notes: ""
+  notes: "Its dumb that socks cost so much"
+
+- title: "Duckbill cap"
+  url: "https://www.aran.com/search.php?search_query=duckbill%20herringbone&Search=&section=content"
+  image: "https://cdn11.bigcommerce.com/s-scgdirr/images/stencil/560x736/products/21927/63807/duck_grey_1__65294.1604695259.1000.1200__40518.1718981242.jpg?c=2" 
+  notes: "I currently have 1x grey. I also would not be opposed to other cool Irish/'academia' clothing"
+
+- title: "Vans Old Skool size 12 Men"
+  url: "https://www.vans.com/en-us/p/shoes/icons/old-skool-5205/old-skool-shoe-VN00110K3N1"
+  image: "https://assets.vans.com/images/t_img/c_fill,g_center,f_auto,h_573,e_unsharp_mask:100,w_458/dpr_2.0/v1787072827/VN00110K3N1-HERO/Old-Skool-Shoe-VANS-HERO.png" 
+  notes: "Probably just black or dark blue? also part of me would not be opposed to velcro or slip-on. And I hate how expensive shoes are."
+
+- title: "Everyday button-up shirts"
+  url: ""
+  image: "" 
+  notes: "Not like nice dress shirts, just everyday shirts, could go over a t-shirt"
+
+# - title: ""
+#   url: ""
+#   image: "" 
+#   notes: ""
+
+# - title: ""
+#   url: ""
+#   image: "" 
+#   notes: ""
 
 # - title: ""
 #   url: ""
