@@ -8,6 +8,8 @@ import {
 } from "https://www.gstatic.com/firebasejs/13.2.0/firebase-database.js";
 import { firebaseConfig } from "./firebase-config.js";
 
+window.claimTrackerStarted = true;
+
 const toggles = [...document.querySelectorAll("[data-claim-toggle]")];
 const cards = [...document.querySelectorAll("[data-item-id]")];
 const saving = new Set();
@@ -27,6 +29,16 @@ function flashConnectionStatus(message) {
   statusTimer = setTimeout(() => {
     if (connectionStatus.textContent === message) setConnectionStatus("");
   }, 4000);
+}
+
+function waitFor(promise, milliseconds, message) {
+  return new Promise((resolve, reject) => {
+    const timeout = setTimeout(() => reject(new Error(message)), milliseconds);
+    promise.then(
+      (value) => { clearTimeout(timeout); resolve(value); },
+      (error) => { clearTimeout(timeout); reject(error); }
+    );
+  });
 }
 
 function setMessage(card, message) {
@@ -49,19 +61,29 @@ if (!configReady) {
     const auth = getAuth(app);
     const database = getDatabase(app);
 
-    setConnectionStatus("Connecting to purchase status...");
+    setConnectionStatus("Connecting to Firebase...");
     cards.forEach((card) => setMessage(card, "Connecting..."));
 
-    const userCredential = await signInAnonymously(auth);
+    const userCredential = await waitFor(
+      signInAnonymously(auth),
+      15000,
+      "Firebase sign-in timed out."
+    );
     const user = userCredential.user;
     const claimsRef = ref(database, "claims");
     let currentClaims = {};
     let hasLoadedClaims = false;
+    const databaseTimeout = setTimeout(() => {
+      if (!hasLoadedClaims) {
+        setConnectionStatus("The database has not responded. Check its URL and published read rules.");
+      }
+    }, 15000);
 
     onValue(claimsRef, (snapshot) => {
       currentClaims = snapshot.val() || {};
       const isFirstSnapshot = !hasLoadedClaims;
       hasLoadedClaims = true;
+      clearTimeout(databaseTimeout);
 
       cards.forEach((card) => {
         const toggle = card.querySelector("[data-claim-toggle]");
@@ -85,9 +107,14 @@ if (!configReady) {
       });
 
       if (isFirstSnapshot) setConnectionStatus("");
-    }, () => {
-      setConnectionStatus("Could not load purchase status. Please refresh.");
-      cards.forEach((card) => setMessage(card, "Could not load purchase status. Please refresh."));
+    }, (error) => {
+      clearTimeout(databaseTimeout);
+      console.error("Could not read purchase status", error);
+      const message = error.code === "PERMISSION_DENIED"
+        ? "Firebase rules denied access. Check the published database rules."
+        : "Could not load purchase status. Check the database URL and connection.";
+      setConnectionStatus(message);
+      cards.forEach((card) => setMessage(card, message));
     });
 
     toggles.forEach((toggle) => {
@@ -136,7 +163,17 @@ if (!configReady) {
     });
   } catch (error) {
     console.error("Could not connect to Firebase", error);
-    setConnectionStatus("Could not connect to purchase status. Please refresh.");
-    cards.forEach((card) => setMessage(card, "Could not connect. Please refresh."));
+    let message = "Could not connect to Firebase. Check the project settings and connection.";
+    if (error.message.includes("timed out")) {
+      message = "Firebase sign-in is taking too long. Check Anonymous sign-in and authorized domains.";
+    } else if (error.code === "auth/unauthorized-domain") {
+      message = "This website is not in Firebase Authentication's authorized domains.";
+    } else if (error.code === "auth/operation-not-allowed") {
+      message = "Enable Anonymous sign-in in Firebase Authentication.";
+    } else if (error.code === "auth/network-request-failed") {
+      message = "Could not reach Firebase Authentication. Check the internet connection.";
+    }
+    setConnectionStatus(message);
+    cards.forEach((card) => setMessage(card, message));
   }
 }

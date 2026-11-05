@@ -22,7 +22,16 @@
     </nav>
 
     <h2>These items are not in any particular order:</h2>
-    <p class="connection-status" id="claim-connection-status" role="status" aria-live="polite">Connecting to purchase status...</p>
+    <p class="connection-status" id="claim-connection-status" role="status" aria-live="polite">Loading purchase tracker...</p>
+    <script>
+      window.claimTrackerStarted = false;
+      window.setTimeout(() => {
+        if (!window.claimTrackerStarted) {
+          document.getElementById('claim-connection-status').textContent =
+            'The purchase tracker did not load. Refresh the page or check that its scripts are available.';
+        }
+      }, 10000);
+    </script>
 
     <!-- Household List -->
     <div id="list-household" class="wishlist-section" style="display: none;">
