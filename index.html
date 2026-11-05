@@ -37,7 +37,7 @@
     <div id="list-household" class="wishlist-section" style="display: none;">
       <div class="wishlist-grid">
         {% for item in site.data.household %}
-          <div class="card" data-item-id="household-{{ forloop.index0 }}">
+          <div class="card" data-item-id="{{ item.id }}">
             {% if item.image != "" and item.image != nil %}
               <div class="card-image">
                 <img src="{{ item.image }}" alt="{{ item.title }}">
@@ -70,7 +70,7 @@
     <div id="list-james" class="wishlist-section" style="display: none;">
       <div class="wishlist-grid">
         {% for item in site.data.james %}
-          <div class="card" data-item-id="james-{{ forloop.index0 }}">
+          <div class="card" data-item-id="{{ item.id }}">
             {% if item.image != "" and item.image != nil %}
               <div class="card-image">
                 <img src="{{ item.image }}" alt="{{ item.title }}">
@@ -103,7 +103,7 @@
     <div id="list-megan" class="wishlist-section" style="display: none;">
       <div class="wishlist-grid">
         {% for item in site.data.megan %}
-          <div class="card" data-item-id="megan-{{ forloop.index0 }}">
+          <div class="card" data-item-id="{{ item.id }}">
             {% if item.image != "" and item.image != nil %}
               <div class="card-image">
                 <img src="{{ item.image }}" alt="{{ item.title }}">
@@ -137,7 +137,7 @@
       <div class="wishlist-grid">
         {% for item in site.data.jemma %}
           {% assign item_is_preclaimed = item.notes | downcase | contains: "buying this" %}
-          <div class="card" data-item-id="jemma-{{ forloop.index0 }}" data-preclaimed="{{ item_is_preclaimed }}">
+          <div class="card" data-item-id="{{ item.id }}" data-preclaimed="{{ item_is_preclaimed }}">
             {% if item.image != "" and item.image != nil %}
               <div class="card-image">
                 <img src="{{ item.image }}" alt="{{ item.title }}">
@@ -170,7 +170,7 @@
     <div id="list-mabel" class="wishlist-section" style="display: none;">
       <div class="wishlist-grid">
         {% for item in site.data.mabel %}
-          <div class="card" data-item-id="mabel-{{ forloop.index0 }}">
+          <div class="card" data-item-id="{{ item.id }}">
             {% if item.image != "" and item.image != nil %}
               <div class="card-image">
                 <img src="{{ item.image }}" alt="{{ item.title }}">
