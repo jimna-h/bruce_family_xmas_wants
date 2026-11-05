@@ -140,6 +140,17 @@ h1 {
   font-size: 0.82rem;
 }
 
+.connection-status {
+  min-height: 1.5rem;
+  margin: -1.5rem 0 1.5rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.connection-status:empty {
+  display: none;
+}
+
 /* --- Tab Navigation Styles --- */
 .wishlist-tabs {
   display: flex;

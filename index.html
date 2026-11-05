@@ -22,6 +22,7 @@
     </nav>
 
     <h2>These items are not in any particular order:</h2>
+    <p class="connection-status" id="claim-connection-status" role="status" aria-live="polite">Connecting to purchase status...</p>
 
     <!-- Household List -->
     <div id="list-household" class="wishlist-section" style="display: none;">
@@ -46,7 +47,7 @@
               {% endif %}
 
               <label class="claim-control">
-                <input type="checkbox" data-claim-toggle>
+                <input type="checkbox" data-claim-toggle disabled>
                 <span data-claim-label>Mark as bought</span>
               </label>
               <p class="claim-message" data-claim-message aria-live="polite"></p>
@@ -79,7 +80,7 @@
               {% endif %}
 
               <label class="claim-control">
-                <input type="checkbox" data-claim-toggle>
+                <input type="checkbox" data-claim-toggle disabled>
                 <span data-claim-label>Mark as bought</span>
               </label>
               <p class="claim-message" data-claim-message aria-live="polite"></p>
@@ -112,7 +113,7 @@
               {% endif %}
 
               <label class="claim-control">
-                <input type="checkbox" data-claim-toggle>
+                <input type="checkbox" data-claim-toggle disabled>
                 <span data-claim-label>Mark as bought</span>
               </label>
               <p class="claim-message" data-claim-message aria-live="polite"></p>
@@ -146,7 +147,7 @@
               {% endif %}
 
               <label class="claim-control">
-                <input type="checkbox" data-claim-toggle {% if item_is_preclaimed %}checked disabled{% endif %}>
+                <input type="checkbox" data-claim-toggle disabled {% if item_is_preclaimed %}checked{% endif %}>
                 <span data-claim-label>{% if item_is_preclaimed %}Already being bought{% else %}Mark as bought{% endif %}</span>
               </label>
               <p class="claim-message" data-claim-message aria-live="polite"></p>
@@ -179,7 +180,7 @@
               {% endif %}
 
               <label class="claim-control">
-                <input type="checkbox" data-claim-toggle>
+                <input type="checkbox" data-claim-toggle disabled>
                 <span data-claim-label>Mark as bought</span>
               </label>
               <p class="claim-message" data-claim-message aria-live="polite"></p>

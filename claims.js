@@ -11,15 +11,30 @@ import { firebaseConfig } from "./firebase-config.js";
 const toggles = [...document.querySelectorAll("[data-claim-toggle]")];
 const cards = [...document.querySelectorAll("[data-item-id]")];
 const saving = new Set();
+const connectionStatus = document.querySelector("#claim-connection-status");
 const configReady = !Object.values(firebaseConfig).some((value) =>
   String(value).startsWith("PASTE_")
 );
+let statusTimer;
+
+function setConnectionStatus(message) {
+  connectionStatus.textContent = message;
+  clearTimeout(statusTimer);
+}
+
+function flashConnectionStatus(message) {
+  setConnectionStatus(message);
+  statusTimer = setTimeout(() => {
+    if (connectionStatus.textContent === message) setConnectionStatus("");
+  }, 4000);
+}
 
 function setMessage(card, message) {
   card.querySelector("[data-claim-message]").textContent = message;
 }
 
 function showSetupState() {
+  setConnectionStatus("Purchase tracking is not set up yet.");
   toggles.forEach((toggle) => {
     toggle.disabled = true;
     setMessage(toggle.closest("[data-item-id]"), "Claiming will be available soon.");
@@ -34,16 +49,19 @@ if (!configReady) {
     const auth = getAuth(app);
     const database = getDatabase(app);
 
-    toggles.forEach((toggle) => { toggle.disabled = true; });
+    setConnectionStatus("Connecting to purchase status...");
     cards.forEach((card) => setMessage(card, "Connecting..."));
 
     const userCredential = await signInAnonymously(auth);
     const user = userCredential.user;
     const claimsRef = ref(database, "claims");
     let currentClaims = {};
+    let hasLoadedClaims = false;
 
     onValue(claimsRef, (snapshot) => {
       currentClaims = snapshot.val() || {};
+      const isFirstSnapshot = !hasLoadedClaims;
+      hasLoadedClaims = true;
 
       cards.forEach((card) => {
         const toggle = card.querySelector("[data-claim-toggle]");
@@ -63,9 +81,12 @@ if (!configReady) {
             : isClaimed
               ? "Already marked bought"
               : "Mark as bought";
-        setMessage(card, "");
+        if (isFirstSnapshot) setMessage(card, "");
       });
+
+      if (isFirstSnapshot) setConnectionStatus("");
     }, () => {
+      setConnectionStatus("Could not load purchase status. Please refresh.");
       cards.forEach((card) => setMessage(card, "Could not load purchase status. Please refresh."));
     });
 
@@ -76,6 +97,7 @@ if (!configReady) {
         const itemRef = ref(database, `claims/${itemId}`);
         saving.add(itemId);
         toggle.disabled = true;
+        setConnectionStatus("Saving purchase status...");
         setMessage(card, "Saving...");
 
         try {
@@ -88,14 +110,21 @@ if (!configReady) {
           if (!result.committed && result.snapshot.exists()) {
             currentClaims[itemId] = result.snapshot.val();
             setMessage(card, "Someone else already marked this bought.");
+            flashConnectionStatus("Someone else already marked this bought.");
+          } else if (!result.committed) {
+            setMessage(card, "No change was saved. Please try again.");
+            flashConnectionStatus("No change was saved. Please try again.");
           } else {
             if (result.snapshot.exists()) currentClaims[itemId] = result.snapshot.val();
             else delete currentClaims[itemId];
-            setMessage(card, result.snapshot.exists() ? "Marked as bought." : "Mark removed.");
+            const message = result.snapshot.exists() ? "Marked as bought." : "Mark removed.";
+            setMessage(card, message);
+            flashConnectionStatus(message);
           }
         } catch (error) {
           console.error("Could not update purchase status", error);
-          setMessage(card, "Could not save. Please try again.");
+          setMessage(card, "Could not save. Check the connection and database rules.");
+          flashConnectionStatus("Could not save. Check the connection and database rules.");
         } finally {
           saving.delete(itemId);
           const claim = currentClaims[itemId];
@@ -107,6 +136,7 @@ if (!configReady) {
     });
   } catch (error) {
     console.error("Could not connect to Firebase", error);
+    setConnectionStatus("Could not connect to purchase status. Please refresh.");
     cards.forEach((card) => setMessage(card, "Could not connect. Please refresh."));
   }
 }
