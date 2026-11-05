@@ -1,0 +1,17 @@
+{
+  "rules": {
+    "claims": {
+      ".read": "auth != null",
+      "$itemId": {
+        ".write": "auth != null && ((!data.exists() && newData.child('uid').val() === auth.uid) || (data.child('uid').val() === auth.uid && !newData.exists()))",
+        ".validate": "newData.hasChildren(['uid', 'claimed'])",
+        "uid": {
+          ".validate": "newData.isString()"
+        },
+        "claimed": {
+          ".validate": "newData.val() === true"
+        }
+      }
+    }
+  }
+}

@@ -27,7 +27,7 @@
     <div id="list-household" class="wishlist-section" style="display: none;">
       <div class="wishlist-grid">
         {% for item in site.data.household %}
-          <div class="card">
+          <div class="card" data-item-id="household-{{ forloop.index0 }}">
             {% if item.image != "" and item.image != nil %}
               <div class="card-image">
                 <img src="{{ item.image }}" alt="{{ item.title }}">
@@ -44,6 +44,12 @@
               {% if item.url != "" and item.url != nil %}
                 <a class="card-link" href="{{ item.url }}" target="_blank" rel="noopener">View item &rarr;</a>
               {% endif %}
+
+              <label class="claim-control">
+                <input type="checkbox" data-claim-toggle>
+                <span data-claim-label>Mark as bought</span>
+              </label>
+              <p class="claim-message" data-claim-message aria-live="polite"></p>
             </div>
           </div>
         {% endfor %}
@@ -54,7 +60,7 @@
     <div id="list-james" class="wishlist-section" style="display: none;">
       <div class="wishlist-grid">
         {% for item in site.data.james %}
-          <div class="card">
+          <div class="card" data-item-id="james-{{ forloop.index0 }}">
             {% if item.image != "" and item.image != nil %}
               <div class="card-image">
                 <img src="{{ item.image }}" alt="{{ item.title }}">
@@ -71,6 +77,12 @@
               {% if item.url != "" and item.url != nil %}
                 <a class="card-link" href="{{ item.url }}" target="_blank" rel="noopener">View item &rarr;</a>
               {% endif %}
+
+              <label class="claim-control">
+                <input type="checkbox" data-claim-toggle>
+                <span data-claim-label>Mark as bought</span>
+              </label>
+              <p class="claim-message" data-claim-message aria-live="polite"></p>
             </div>
           </div>
         {% endfor %}
@@ -81,7 +93,7 @@
     <div id="list-megan" class="wishlist-section" style="display: none;">
       <div class="wishlist-grid">
         {% for item in site.data.megan %}
-          <div class="card">
+          <div class="card" data-item-id="megan-{{ forloop.index0 }}">
             {% if item.image != "" and item.image != nil %}
               <div class="card-image">
                 <img src="{{ item.image }}" alt="{{ item.title }}">
@@ -98,6 +110,12 @@
               {% if item.url != "" and item.url != nil %}
                 <a class="card-link" href="{{ item.url }}" target="_blank" rel="noopener">View item &rarr;</a>
               {% endif %}
+
+              <label class="claim-control">
+                <input type="checkbox" data-claim-toggle>
+                <span data-claim-label>Mark as bought</span>
+              </label>
+              <p class="claim-message" data-claim-message aria-live="polite"></p>
             </div>
           </div>
         {% endfor %}
@@ -108,7 +126,8 @@
     <div id="list-jemma" class="wishlist-section" style="display: none;">
       <div class="wishlist-grid">
         {% for item in site.data.jemma %}
-          <div class="card">
+          {% assign item_is_preclaimed = item.notes | downcase | contains: "buying this" %}
+          <div class="card" data-item-id="jemma-{{ forloop.index0 }}" data-preclaimed="{{ item_is_preclaimed }}">
             {% if item.image != "" and item.image != nil %}
               <div class="card-image">
                 <img src="{{ item.image }}" alt="{{ item.title }}">
@@ -125,6 +144,12 @@
               {% if item.url != "" and item.url != nil %}
                 <a class="card-link" href="{{ item.url }}" target="_blank" rel="noopener">View item &rarr;</a>
               {% endif %}
+
+              <label class="claim-control">
+                <input type="checkbox" data-claim-toggle {% if item_is_preclaimed %}checked disabled{% endif %}>
+                <span data-claim-label>{% if item_is_preclaimed %}Already being bought{% else %}Mark as bought{% endif %}</span>
+              </label>
+              <p class="claim-message" data-claim-message aria-live="polite"></p>
             </div>
           </div>
         {% endfor %}
@@ -135,7 +160,7 @@
     <div id="list-mabel" class="wishlist-section" style="display: none;">
       <div class="wishlist-grid">
         {% for item in site.data.mabel %}
-          <div class="card">
+          <div class="card" data-item-id="mabel-{{ forloop.index0 }}">
             {% if item.image != "" and item.image != nil %}
               <div class="card-image">
                 <img src="{{ item.image }}" alt="{{ item.title }}">
@@ -152,6 +177,12 @@
               {% if item.url != "" and item.url != nil %}
                 <a class="card-link" href="{{ item.url }}" target="_blank" rel="noopener">View item &rarr;</a>
               {% endif %}
+
+              <label class="claim-control">
+                <input type="checkbox" data-claim-toggle>
+                <span data-claim-label>Mark as bought</span>
+              </label>
+              <p class="claim-message" data-claim-message aria-live="polite"></p>
             </div>
           </div>
         {% endfor %}
@@ -181,5 +212,6 @@
 
     window.addEventListener('DOMContentLoaded', switchTab);
   </script>
+  <script type="module" src="./claims.js"></script>
 </body>
 </html>
