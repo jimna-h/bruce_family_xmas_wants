@@ -5,7 +5,31 @@
 #   notes: ""
 
 - title: "Codenames: Criticol Role, expansion pack"
-  id: ""
+  id: "house-1"
   url: "https://store.czechgames.com/products/codenames-critical-role-adventures-vox-machina-expansion-pack"
   image: "https://store.czechgames.com/cdn/shop/files/vox.webp?v=1776361949&width=823" 
+  notes: ""
+
+- title: "nintendo switch controllers"
+  id: "house-2"
+  url: "https://www.nintendo.com/us/store/products/joy-con-l-r-pastel-purple-pastel-green-117078/"
+  image: "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_656/b_white/f_auto/q_auto/ncom/My%20Nintendo%20Store/EN-US/Nintendo%20Switch%20Accessories/Controllers/joy-con-l-r-pastel-purple-pastel-green-117078/117078-nintendo-switch-joy-con-set-pastel-purple-l-pastel-green-r-box-1200x675" 
+  notes: ""
+
+  - title: ""
+  id: ""
+  url: ""
+  image: "" 
+  notes: ""
+
+  - title: ""
+  id: ""
+  url: ""
+  image: "" 
+  notes: ""
+
+  - title: ""
+  id: ""
+  url: ""
+  image: "" 
   notes: ""
