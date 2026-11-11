@@ -20,13 +20,13 @@
   id: "house-3"
   url: ""
   image: "" 
-  notes: ""
+  notes: "any"
 
   - title: "fluffy, big, bath towels"
   id: "house-4"
   url: ""
   image: "" 
-  notes: ""
+  notes: "preferably blue, gray, or white"
 
   - title: ""
   id: ""
