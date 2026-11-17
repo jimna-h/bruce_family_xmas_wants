@@ -80,7 +80,7 @@
   id: "james-11"
   url: "https://www.amazon.com/Magic-Gathering-Stories-Elspeth-Dan-Watters/dp/1506749763/ref=sr_1_1?adgrpid=1333710201566867&gb=2&hvadid=83357181134497&hvbmt=be&hvdev=c&hvexpln=0&hvlocphy=66584&hvnetw=o&hvocijid=6305250898229937656--&hvqmt=e&hvtargid=kwd-83358140688474%3Aloc-190&hydadcr=22562_13494426_8387&mcid=ce86fa7d3b443e4a8693d61567ef99ac&sr=8-1"
   image: "https://m.media-amazon.com/images/I/51gd7A1AvwL._SY445_SX342_FMwebp_.jpg"
-  notes: ""
+  notes: "Of the books on here, this is #1 want by a mile"
 
 - title: "Untold Stories: Jace"
   id: "james-12"
@@ -112,7 +112,7 @@
   image: "https://cdn.svc.asmodee.net/production-gamegenic/uploads/image-converter/GG_Casual_Prime_8er_Green_0004_1.webp" 
   notes: "Their items come on and off Amazon all the time."
 
-- title: "Spindown lot - MIX COLOR"
+- title: "Spindown lot - mix color AND black"
   id: "james-17"
   url: "https://www.amazon.com/SmartDealsPro-12-Pack-Sided-Pearl-Polyhedral/dp/B0F7R8MTQ5/ref=sr_1_10?adgrpid=1343605807844252&gb=2&hvadid=83975656075505&hvbmt=bp&hvdev=c&hvexpln=0&hvlocphy=66584&hvnetw=o&hvocijid=1537532785108785334--&hvqmt=p&hvtargid=kwd-83976651432103%3Aloc-190&hydadcr=7690_13723046_2078047&mcid=d4dfdd66986f32d9ae5ea05c2ff160a9&sr=8-10"
   image: "https://m.media-amazon.com/images/I/71i8mhkDc8L._AC_SL1500_.jpg" 
@@ -122,7 +122,7 @@
   id: "james-18"
   url: ""
   image: "" 
-  notes: "Generally thin, variety of colors... basically I just want to be able to roughly match my socks to my ties :)"
+  notes: "Generally thin and strtchy. In a ariety of colors to be able to roughly match my socks to my ties :)"
 
 - title: "Everyday socks"
   id: "james-19"
@@ -153,3 +153,45 @@
   url: "https://www.amazon.com/Doctor-Who-Jodie-Whitaker-Collection/dp/B0BQRMGP9G/ref=sr_1_1?sr=8-1"
   image: "https://m.media-amazon.com/images/I/81kxEtTkE0L._SY445_.jpg" 
   notes: "I haven't actually seen any of Jodie Whittaker's episodes, but I already have the DVD sets for the rest of 'New Who'"
+
+- title: "Omens of Chaos"
+  id: "james-24"
+  url: "https://www.amazon.com/Strixhaven-Omens-Chaos-Magic-Gathering/dp/059387143X/ref=tmm_hrd_swatch_0"
+  image: "https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/91+yQycY5wL._SL1500_.jpg" 
+  notes: ""
+
+- title: "Untold Stories: Liliana"
+  id: "james-25"
+  url: "https://www.amazon.com/Magic-Gathering-Stories-Liliana-Torunn-Gr%C3%B8nbekk/dp/150674933X/ref=sr_1_1?s=books&sr=1-1"
+  image: "https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/91bu8uGlvAL._SL1500_.jpg" 
+  notes: "Releases July 2027"
+
+- title: "Untold Stories: Chandra"
+  id: "james-26"
+  url: ""
+  image: "https://files.mtg.wiki/Untold_Stories_-_Chandra_1a.jpg" 
+  notes: "future"
+
+- title: "Mage of Zhalfir"
+  id: "james-27"
+  url: "https://www.darkhorse.com/comics/3019-188/magic-the-gathering-the-mage-of-zhalfir-1-mateus-manhanini-variant-cover/"
+  image: "https://images.darkhorse.com/covers/600/30/3019188.jpg" 
+  notes: ""
+
+- title: "Burger King MTG deckbox and sleeves"
+  id: "james-28"
+  url: ""
+  image: "https://external-preview.redd.it/magic-the-gathering-scalpers-are-selling-burger-king-deck-v0-m2YqTV0Flr4lBI_O51XktzlP8k7dVBYvVDGSX8d3pXc.jpeg?auto=webp&s=fcc94abcae94c85826bf2a50f989a6562a9c3db5" 
+  notes: "This was a promotion they just ran in Italy and people are reselling them for absurd prices. I'm kind of just hoping they re-run the promotion here 🙃"
+
+# - title: ""
+#   id: "james-29"
+#   url: ""
+#   image: "" 
+#   notes: ""
+
+# - title: ""
+#   id: "james-30"
+#   url: ""
+#   image: "" 
+#   notes: ""
