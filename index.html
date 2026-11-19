@@ -21,6 +21,11 @@
       <a href="?tab=mabel" class="tab-btn" data-tab="mabel">Mabel</a>
     </nav>
 
+    <div class="category-actions" aria-label="Category controls">
+      <button type="button" id="expand-categories">Expand all</button>
+      <button type="button" id="collapse-categories">Collapse all</button>
+    </div>
+
     <h2>These items are not in any particular order:</h2>
     <p class="connection-status" id="claim-connection-status" role="status" aria-live="polite">Loading purchase tracker...</p>
     <script>
@@ -265,6 +270,13 @@
       if (targetList) targetList.style.display = 'block';
       if (targetBtn) targetBtn.classList.add('active');
     }
+
+    document.getElementById('expand-categories').addEventListener('click', () => {
+      document.querySelectorAll('.category').forEach(category => { category.open = true; });
+    });
+    document.getElementById('collapse-categories').addEventListener('click', () => {
+      document.querySelectorAll('.category').forEach(category => { category.open = false; });
+    });
 
     window.addEventListener('DOMContentLoaded', switchTab);
   </script>
