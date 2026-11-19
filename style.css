@@ -45,18 +45,40 @@ h1 {
 .category {
   margin: 0 0 1.5rem;
   border: 1px solid var(--line);
-  border-radius: 4px;
-  background: rgba(255, 255, 255, 0.45);
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
 }
 
 .category summary {
-  padding: 0.8rem 1rem;
+  min-height: 3.5rem;
+  padding: 0.85rem 1.1rem;
   color: var(--pine);
   font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
   font-size: 1.25rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  list-style: none;
+  transition: background-color 0.18s ease;
 }
 
+.category summary::-webkit-details-marker { display: none; }
+.category summary::after {
+  content: "";
+  width: 0.65rem;
+  height: 0.65rem;
+  flex: 0 0 auto;
+  border-right: 2px solid var(--pine);
+  border-bottom: 2px solid var(--pine);
+  transform: rotate(45deg) translateY(-0.15rem);
+  transition: transform 0.18s ease;
+}
+.category[open] summary::after { transform: rotate(225deg) translate(-0.1rem, -0.1rem); }
+.category summary:hover { background: var(--paper); }
+.category summary:focus-visible { outline: 3px solid var(--pine); outline-offset: -3px; }
 .category[open] summary { border-bottom: 1px solid var(--line); }
 .category .wishlist-grid { padding: 1rem; }
 
@@ -67,6 +89,16 @@ h1 {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  transition: opacity 0.25s ease, filter 0.25s ease;
+}
+
+.card:has([data-claim-toggle]:checked) {
+  opacity: 0.58;
+  filter: grayscale(0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .category summary, .category summary::after, .card { transition: none; }
 }
 
 .card-image {
