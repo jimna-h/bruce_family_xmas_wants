@@ -26,7 +26,7 @@
       <button type="button" id="collapse-categories">Collapse all</button>
     </div>
 
-    <h2>These items are not in any particular order:</h2>
+    <!-- <h2>These items are not in any particular order:</h2> -->
     <p class="connection-status" id="claim-connection-status" role="status" aria-live="polite">Loading purchase tracker...</p>
     <script>
       window.claimTrackerStarted = false;
@@ -257,6 +257,42 @@
       });
     }
 
+    function toggleCategory(category) {
+      const grid = category.querySelector('.wishlist-grid');
+      if (!grid) return;
+      if (grid.categoryAnimation) grid.categoryAnimation.cancel();
+
+      if (category.open) {
+        const height = grid.getBoundingClientRect().height;
+        const animation = grid.animate(
+          [{ height: `${height}px`, opacity: 1 }, { height: '0px', opacity: 0 }],
+          { duration: 220, easing: 'ease-in', fill: 'forwards' }
+        );
+        grid.categoryAnimation = animation;
+        animation.onfinish = () => {
+          category.open = false;
+          grid.style.removeProperty('height');
+          grid.style.removeProperty('opacity');
+          grid.categoryAnimation = null;
+        };
+      } else {
+        category.open = true;
+        grid.style.height = '0px';
+        grid.style.opacity = '0';
+        const height = grid.scrollHeight;
+        const animation = grid.animate(
+          [{ height: '0px', opacity: 0 }, { height: `${height}px`, opacity: 1 }],
+          { duration: 220, easing: 'ease-out', fill: 'forwards' }
+        );
+        grid.categoryAnimation = animation;
+        animation.onfinish = () => {
+          grid.style.removeProperty('height');
+          grid.style.removeProperty('opacity');
+          grid.categoryAnimation = null;
+        };
+      }
+    }
+
     function switchTab() {
       sortCategories();
       const activeTab = getTabFromUrl();
@@ -272,10 +308,30 @@
     }
 
     document.getElementById('expand-categories').addEventListener('click', () => {
-      document.querySelectorAll('.category').forEach(category => { category.open = true; });
+      document.querySelectorAll('.category').forEach(category => {
+        const grid = category.querySelector('.wishlist-grid');
+        if (grid.categoryAnimation) grid.categoryAnimation.cancel();
+        grid.style.removeProperty('height');
+        grid.style.removeProperty('opacity');
+        grid.categoryAnimation = null;
+        category.open = true;
+      });
     });
     document.getElementById('collapse-categories').addEventListener('click', () => {
-      document.querySelectorAll('.category').forEach(category => { category.open = false; });
+      document.querySelectorAll('.category').forEach(category => {
+        const grid = category.querySelector('.wishlist-grid');
+        if (grid.categoryAnimation) grid.categoryAnimation.cancel();
+        grid.style.removeProperty('height');
+        grid.style.removeProperty('opacity');
+        grid.categoryAnimation = null;
+        category.open = false;
+      });
+    });
+    document.querySelectorAll('.category > summary').forEach(summary => {
+      summary.addEventListener('click', event => {
+        event.preventDefault();
+        toggleCategory(summary.parentElement);
+      });
     });
 
     window.addEventListener('DOMContentLoaded', switchTab);
