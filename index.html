@@ -35,8 +35,12 @@
 
     <!-- Household List -->
     <div id="list-household" class="wishlist-section" style="display: none;">
-      <div class="wishlist-grid">
-        {% for item in site.data.household %}
+      {% assign categories = site.data.household | group_by_exp: "item.category | default: 'Other'" %}
+      {% for category in categories %}
+      <details class="category" open>
+        <summary>{{ category.name }}</summary>
+        <div class="wishlist-grid">
+        {% for item in category.items %}
           <div class="card" data-item-id="{{ item.id }}">
             {% if item.image != "" and item.image != nil %}
               <div class="card-image">
@@ -63,13 +67,19 @@
             </div>
           </div>
         {% endfor %}
-      </div>
+        </div>
+      </details>
+      {% endfor %}
     </div>
 
     <!-- James's List -->
     <div id="list-james" class="wishlist-section" style="display: none;">
-      <div class="wishlist-grid">
-        {% for item in site.data.james %}
+      {% assign categories = site.data.james | group_by_exp: "item.category | default: 'Other'" %}
+      {% for category in categories %}
+      <details class="category" open>
+        <summary>{{ category.name }}</summary>
+        <div class="wishlist-grid">
+        {% for item in category.items %}
           <div class="card" data-item-id="{{ item.id }}">
             {% if item.image != "" and item.image != nil %}
               <div class="card-image">
@@ -96,13 +106,19 @@
             </div>
           </div>
         {% endfor %}
-      </div>
+        </div>
+      </details>
+      {% endfor %}
     </div>
 
     <!-- Megan's List -->
     <div id="list-megan" class="wishlist-section" style="display: none;">
-      <div class="wishlist-grid">
-        {% for item in site.data.megan %}
+      {% assign categories = site.data.megan | group_by_exp: "item.category | default: 'Other'" %}
+      {% for category in categories %}
+      <details class="category" open>
+        <summary>{{ category.name }}</summary>
+        <div class="wishlist-grid">
+        {% for item in category.items %}
           <div class="card" data-item-id="{{ item.id }}">
             {% if item.image != "" and item.image != nil %}
               <div class="card-image">
@@ -129,13 +145,19 @@
             </div>
           </div>
         {% endfor %}
-      </div>
+        </div>
+      </details>
+      {% endfor %}
     </div>
 
     <!-- Jemma's List -->
     <div id="list-jemma" class="wishlist-section" style="display: none;">
-      <div class="wishlist-grid">
-        {% for item in site.data.jemma %}
+      {% assign categories = site.data.jemma | group_by_exp: "item.category | default: 'Other'" %}
+      {% for category in categories %}
+      <details class="category" open>
+        <summary>{{ category.name }}</summary>
+        <div class="wishlist-grid">
+        {% for item in category.items %}
           {% assign item_is_preclaimed = item.notes | downcase | contains: "buying this" %}
           <div class="card" data-item-id="{{ item.id }}" data-preclaimed="{{ item_is_preclaimed }}">
             {% if item.image != "" and item.image != nil %}
@@ -163,13 +185,19 @@
             </div>
           </div>
         {% endfor %}
-      </div>
+        </div>
+      </details>
+      {% endfor %}
     </div>
 
     <!-- Mabel's List -->
     <div id="list-mabel" class="wishlist-section" style="display: none;">
-      <div class="wishlist-grid">
-        {% for item in site.data.mabel %}
+      {% assign categories = site.data.mabel | group_by_exp: "item.category | default: 'Other'" %}
+      {% for category in categories %}
+      <details class="category" open>
+        <summary>{{ category.name }}</summary>
+        <div class="wishlist-grid">
+        {% for item in category.items %}
           <div class="card" data-item-id="{{ item.id }}">
             {% if item.image != "" and item.image != nil %}
               <div class="card-image">
@@ -196,7 +224,9 @@
             </div>
           </div>
         {% endfor %}
-      </div>
+        </div>
+      </details>
+      {% endfor %}
     </div>
 
   </main>

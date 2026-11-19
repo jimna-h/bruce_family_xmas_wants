@@ -11,4 +11,4 @@ This site uses Firebase Authentication's anonymous provider and Realtime Databas
 
 The Firebase web config is visible to site visitors by design. Access is controlled by Realtime Database rules. The rules let visitors mark an unclaimed item and let the same browser undo its own claim; another browser cannot clear it.
 
-Each wishlist item has a fixed `id` in its YAML entry. Keep that ID if you rename or move the item. When adding an item, give it a new unique ID in that list (for example, the next `james-N` value). Deleting an item leaves an unused record in Firebase, which does not affect the other items.
+Each wishlist item needs a unique, stable `id` in its YAML entry. Keep that ID if you rename or move the item. When adding an item, give it a new unique ID in that list (for example, the next `james-N` value). Deleting an item leaves an unused record in Firebase, which does not affect the other items. Add an optional `category: "Books"` field to group an item; categories collapse independently, and items without a category appear under “Other.”

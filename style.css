@@ -42,6 +42,24 @@ h1 {
   gap: 1.75rem;
 }
 
+.category {
+  margin: 0 0 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.category summary {
+  padding: 0.8rem 1rem;
+  color: var(--pine);
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.category[open] summary { border-bottom: 1px solid var(--line); }
+.category .wishlist-grid { padding: 1rem; }
+
 .card {
   background: #fff;
   border: 1px solid var(--line);
