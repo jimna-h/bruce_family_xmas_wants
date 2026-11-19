@@ -16,6 +16,12 @@
   image: "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_656/b_white/f_auto/q_auto/ncom/My%20Nintendo%20Store/EN-US/Nintendo%20Switch%20Accessories/Controllers/joy-con-l-r-pastel-purple-pastel-green-117078/117078-nintendo-switch-joy-con-set-pastel-purple-l-pastel-green-r-box-1200x675" 
   notes: ""
 
+- title: "salt and pepper shakers"
+  id: "house-5"
+  url: "https://a.co/d/01nYlZQR"
+  image: "https://m.media-amazon.com/images/I/81UomDGOWCL._AC_SX679_.jpg" 
+  notes: ""
+  
 - title: "oven mits"
   id: "house-3"
   url: ""
@@ -27,6 +33,8 @@
   url: ""
   image: "" 
   notes: "preferably blue, gray, or white"
+
+
 
 # - title: ""
 #   id: "house-5"
