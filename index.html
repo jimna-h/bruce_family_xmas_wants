@@ -35,7 +35,7 @@
 
     <!-- Household List -->
     <div id="list-household" class="wishlist-section" style="display: none;">
-      {% assign categories = site.data.household | group_by_exp: "item.category | default: 'Other'" %}
+      {% assign categories = site.data.household | group_by_exp: "item", "item.category | default: 'misc.'" %}
       {% for category in categories %}
       <details class="category" open>
         <summary>{{ category.name }}</summary>
@@ -74,7 +74,7 @@
 
     <!-- James's List -->
     <div id="list-james" class="wishlist-section" style="display: none;">
-      {% assign categories = site.data.james | group_by_exp: "item.category | default: 'Other'" %}
+      {% assign categories = site.data.james | group_by_exp: "item", "item.category | default: 'misc.'" %}
       {% for category in categories %}
       <details class="category" open>
         <summary>{{ category.name }}</summary>
@@ -113,7 +113,7 @@
 
     <!-- Megan's List -->
     <div id="list-megan" class="wishlist-section" style="display: none;">
-      {% assign categories = site.data.megan | group_by_exp: "item.category | default: 'Other'" %}
+      {% assign categories = site.data.megan | group_by_exp: "item", "item.category | default: 'misc.'" %}
       {% for category in categories %}
       <details class="category" open>
         <summary>{{ category.name }}</summary>
@@ -152,7 +152,7 @@
 
     <!-- Jemma's List -->
     <div id="list-jemma" class="wishlist-section" style="display: none;">
-      {% assign categories = site.data.jemma | group_by_exp: "item.category | default: 'Other'" %}
+      {% assign categories = site.data.jemma | group_by_exp: "item", "item.category | default: 'misc.'" %}
       {% for category in categories %}
       <details class="category" open>
         <summary>{{ category.name }}</summary>
@@ -192,7 +192,7 @@
 
     <!-- Mabel's List -->
     <div id="list-mabel" class="wishlist-section" style="display: none;">
-      {% assign categories = site.data.mabel | group_by_exp: "item.category | default: 'Other'" %}
+      {% assign categories = site.data.mabel | group_by_exp: "item", "item.category | default: 'misc.'" %}
       {% for category in categories %}
       <details class="category" open>
         <summary>{{ category.name }}</summary>
@@ -237,7 +237,23 @@
       return params.get('tab') || 'household';
     }
 
+    function sortCategories() {
+      document.querySelectorAll('.wishlist-section').forEach(section => {
+        const categories = [...section.querySelectorAll(':scope > .category')];
+        categories.sort((a, b) => {
+          const nameA = a.querySelector('summary').textContent.trim();
+          const nameB = b.querySelector('summary').textContent.trim();
+          const miscA = nameA.toLowerCase() === 'misc.';
+          const miscB = nameB.toLowerCase() === 'misc.';
+          if (miscA !== miscB) return miscA ? 1 : -1;
+          return nameA.localeCompare(nameB, undefined, { sensitivity: 'base' });
+        });
+        categories.forEach(category => section.appendChild(category));
+      });
+    }
+
     function switchTab() {
+      sortCategories();
       const activeTab = getTabFromUrl();
       
       document.querySelectorAll('.wishlist-section').forEach(el => el.style.display = 'none');
