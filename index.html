@@ -273,13 +273,14 @@
           category.open = false;
           grid.style.removeProperty('height');
           grid.style.removeProperty('opacity');
+          animation.cancel();
           grid.categoryAnimation = null;
         };
       } else {
         category.open = true;
+        const height = grid.scrollHeight;
         grid.style.height = '0px';
         grid.style.opacity = '0';
-        const height = grid.scrollHeight;
         const animation = grid.animate(
           [{ height: '0px', opacity: 0 }, { height: `${height}px`, opacity: 1 }],
           { duration: 220, easing: 'ease-out', fill: 'forwards' }
@@ -288,6 +289,7 @@
         animation.onfinish = () => {
           grid.style.removeProperty('height');
           grid.style.removeProperty('opacity');
+          animation.cancel();
           grid.categoryAnimation = null;
         };
       }
