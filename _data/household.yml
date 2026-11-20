@@ -79,7 +79,7 @@
 - title: "Other Star Realms Expansions"
   id: "house-10"
   url: "https://www.starrealms.com/sets-and-expansions"
-  image: ""
+  image: "https://www.starrealms.com/images/content/cards_on_table.webp"
   notes: "We currently have: the base game, Frontiers, and Colony Wars"
   category: "Board Games: Expansions"
 
@@ -88,7 +88,7 @@
   url: "https://www.alderac.com/smash-up/"
   image: "https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/61bWBo-3IxL._AC_SL1000_.jpg"
   notes: "We currently have: the base game, Aweosme Level 9000, and the apes from Science Fiction Double Feature"
-  category: ""
+  category: "Board Games: Expansions"
 
 - title: "Blood on the Clocktower"
   id: "house-12"
