@@ -59,7 +59,7 @@
   id: "house-7"
   url: "https://www.amazon.com/Leder-Games-LED01000-Root/dp/B07F454YF3/ref=sr_1_3?s=toys-and-games&sr=1-3"
   image: "https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/91dLPxrPtTL._AC_SL1500_.jpg"
-  notes: "This game also has lots of expansions (one of them introduces otters!)"
+  notes: "One of the expansions for this game has otters :)"
   category: "Board Games"
 
 - title: "Star Realms: Crisis"
@@ -97,12 +97,12 @@
   notes: "Megan especially likes this game"
   category: "Board Games"
 
-# - title: ""
-#   id: "house-13"
-#   url: ""
-#   image: ""
-#   notes: ""
-#   category: ""
+- title: "Dominion 2nd Edition"
+  id: "house-13"
+  url: "https://www.amazon.com/dp/B01LYLIS2U?lv=shuf&hvlocphy=66584&psc=1&hvnetw=o&hvadid=80058400530621&hvbmt=be&hvlocint=&hvdev=c&hvocijid=5412888782431520906-B01LYLIS2U-&hvqmt=e&hvexpln=0&hvtargid=pla-4583657879817333&channelId=69&plpRedirect=mhFallback"
+  image: "https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/81Ma5Q1PyGL._AC_SL1500_.jpg"
+  notes: ""
+  category: "Board Games"
 
 # - title: ""
 #   id: "house-14"
