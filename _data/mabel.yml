@@ -2,7 +2,8 @@
 #   id: ""
 #   url: ""
 #   image: "" 
-#   notes: ""
+#   notes: |-
+#  
 #   category: ""
 
 
@@ -10,82 +11,94 @@
   id: "mabel-0"
   url: ""
   image: "" 
-  notes: "see the thing is mabel doesnt really need anything. she'd probably just enjoy the wrapping paper."
+  notes: |-
+    see the thing is mabel doesnt really need anything. she'd probably just enjoy the wrapping paper.
   category: ""
 
 - title: "Clothes"
   id: "mabel-1"
   url: ""
   image: "" 
-  notes: "she will be about 9-12mo clothing size"
+  notes: |-
+    she will be about 9-12mo clothing size
   category: ""
 
 # - title: ""
 #   id: "mabel-2"
 #   url: ""
 #   image: ""
-#   notes: ""
+#   notes: |-
+#  
 #   category: ""
 
 # - title: ""
 #   id: "mabel-3"
 #   url: ""
 #   image: ""
-#   notes: ""
+#   notes: |-
+#  
 #   category: ""
 
 # - title: ""
 #   id: "mabel-4"
 #   url: ""
 #   image: ""
-#   notes: ""
+#   notes: |-
+#  
 #   category: ""
 
 # - title: ""
 #   id: "mabel-5"
 #   url: ""
 #   image: ""
-#   notes: ""
+#   notes: |-
+#  
 #   category: ""
 
 # - title: ""
 #   id: "mabel-6"
 #   url: ""
 #   image: ""
-#   notes: ""
+#   notes: |-
+#  
 #   category: ""
 
 # - title: ""
 #   id: "mabel-7"
 #   url: ""
 #   image: ""
-#   notes: ""
+#   notes: |-
+#  
 #   category: ""
 
 # - title: ""
 #   id: "mabel-8"
 #   url: ""
 #   image: ""
-#   notes: ""
+#   notes: |-
+#  
 #   category: ""
 
 # - title: ""
 #   id: "mabel-9"
 #   url: ""
 #   image: ""
-#   notes: ""
+#   notes: |-
+#  
 #   category: ""
 
 # - title: ""
 #   id: "mabel-10"
 #   url: ""
 #   image: ""
-#   notes: ""
+#   notes: |-
+#  
 #   category: ""
 
 # - title: ""
 #   id: "mabel-11"
 #   url: ""
 #   image: ""
-#   notes: ""
+#   notes: |-
+#  
 #   category: ""

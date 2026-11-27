@@ -57,7 +57,7 @@
               <h2>{{ item.title }}</h2>
 
               {% if item.notes != "" and item.notes != nil %}
-                <p class="notes">{{ item.notes }}</p>
+                <div class="notes">{{ item.notes | markdownify }}</div>
               {% endif %}
 
               {% if item.url != "" and item.url != nil %}
@@ -96,7 +96,7 @@
               <h2>{{ item.title }}</h2>
 
               {% if item.notes != "" and item.notes != nil %}
-                <p class="notes">{{ item.notes }}</p>
+                <div class="notes">{{ item.notes | markdownify }}</div>
               {% endif %}
 
               {% if item.url != "" and item.url != nil %}
@@ -135,7 +135,7 @@
               <h2>{{ item.title }}</h2>
 
               {% if item.notes != "" and item.notes != nil %}
-                <p class="notes">{{ item.notes }}</p>
+                <div class="notes">{{ item.notes | markdownify }}</div>
               {% endif %}
 
               {% if item.url != "" and item.url != nil %}
@@ -175,7 +175,7 @@
               <h2>{{ item.title }}</h2>
 
               {% if item.notes != "" and item.notes != nil %}
-                <p class="notes">{{ item.notes }}</p>
+                <div class="notes">{{ item.notes | markdownify }}</div>
               {% endif %}
 
               {% if item.url != "" and item.url != nil %}
@@ -214,7 +214,7 @@
               <h2>{{ item.title }}</h2>
 
               {% if item.notes != "" and item.notes != nil %}
-                <p class="notes">{{ item.notes }}</p>
+                <div class="notes">{{ item.notes | markdownify }}</div>
               {% endif %}
 
               {% if item.url != "" and item.url != nil %}

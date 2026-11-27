@@ -2,42 +2,48 @@
 #   id: ""
 #   url: ""
 #   image: "" 
-#   notes: ""
+# notes: |-
+#  
 #   category: ""
 
 - title: "Codenames: Critical Role Vox Machina expansion"
   id: "house-0"
   url: "https://store.czechgames.com/products/codenames-critical-role-adventures-vox-machina-expansion-pack"
   image: "https://store.czechgames.com/cdn/shop/files/vox.webp?v=1776361949&width=823" 
-  notes: ""
-  category: "Board Games: Expansions"
+  notes: |-
+    
+  category: "Board Games"
 
 - title: "nintendo switch controllers"
   id: "house-1"
   url: "https://www.nintendo.com/us/store/products/joy-con-l-r-pastel-purple-pastel-green-117078/"
   image: "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_656/b_white/f_auto/q_auto/ncom/My%20Nintendo%20Store/EN-US/Nintendo%20Switch%20Accessories/Controllers/joy-con-l-r-pastel-purple-pastel-green-117078/117078-nintendo-switch-joy-con-set-pastel-purple-l-pastel-green-r-box-1200x675" 
-  notes: ""
+  notes: |-
+    
   category: "misc."
 
 - title: "salt and pepper shakers"
   id: "house-2"
   url: "https://a.co/d/01nYlZQR"
   image: "https://m.media-amazon.com/images/I/81UomDGOWCL._AC_SX679_.jpg" 
-  notes: ""
+  notes: |-
+    
   category: "household items"
 
 - title: "oven mits"
   id: "house-3"
   url: ""
   image: "" 
-  notes: "any"
+  notes: |-
+    any
   category: "household items"
 
 - title: "car vacuum"
   id: "house-4"
   url: ""
   image: "" 
-  notes: "dont care what it looks like, just want it to work"
+  notes: |-
+    dont care what it looks like, just want it to work
   category: "household items"
 
 
@@ -45,82 +51,104 @@
   id: "house-5"
   url: "https://www.amazon.com/Stonemaier-Games-STM910-Wingspan-Multi-colored/dp/B07YQ641NQ/ref=sr_1_1?s=toys-and-games&sr=1-1"
   image: "https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/61+m0HYftaL._AC_SL1144_.jpg" 
-  notes: ""
+  notes: |-
+    
   category: "Board Games"
 
 - title: "Everdell"
   id: "house-6"
   url: "https://www.amazon.com/Everdell-Standard-Starling-Games-Woodland/dp/B09ZWQTTNR/ref=sr_1_1?s=toys-and-games&sr=1-1"
   image: "https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/61jeXIDc84L._AC_SL1024_.jpg" 
-  notes: ""
+  notes: |-
+    
   category: "Board Games"
 
-- title: "Root"
+- title: "Root Base Game"
   id: "house-7"
   url: "https://www.amazon.com/Leder-Games-LED01000-Root/dp/B07F454YF3/ref=sr_1_3?s=toys-and-games&sr=1-3"
   image: "https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/91dLPxrPtTL._AC_SL1500_.jpg"
-  notes: "One of the expansions for this game has otters :)"
+  notes: |-
+    One of the expansions for this game has otters :)
   category: "Board Games"
 
 - title: "Star Realms: Crisis"
   id: "house-8"
   url: "https://www.amazon.com/Wise-Wizard-Games-Realms-Bundle/dp/B0B8JWKXKM/ref=sr_1_1?sr=8-1"
   image: "https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/61Y59FJdhzL._AC_SL1000_.jpg"
-  notes: ""
+  notes: |-
+    
   category: "Board Games: Expansions"
 
 - title: "Star Realms: Command Decks"
   id: "house-9"
   url: "https://www.amazon.com/Star-Realms-Bundle-Complete-Command/dp/B08KPLPLDF"
   image: "https://m.media-amazon.com/images/I/71rQ-HYfR3L._AC_AIweblab1392912,T3_FMavif_SF1018.5,1018.5_PQ65_.jpg?aicid=detailPage-mediaBlock"
-  notes: "This link also has the United expansions"
+  notes: |-
+    This link also has the United expansions
   category: "Board Games: Expansions"
 
 - title: "Other Star Realms Expansions"
   id: "house-10"
   url: "https://www.starrealms.com/sets-and-expansions"
   image: "https://www.starrealms.com/images/content/cards_on_table.webp"
-  notes: "We currently have: the base game, Frontiers, and Colony Wars"
+  notes: |-
+     We currently have:
+     - the base game
+     - Frontiers
+     - Colony Wars"
   category: "Board Games: Expansions"
 
 - title: "Smash Up Expansions"
   id: "house-11"
   url: "https://www.alderac.com/smash-up/"
   image: "https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/61bWBo-3IxL._AC_SL1000_.jpg"
-  notes: "We currently have: the base game, Aweosme Level 9000, and the apes from Science Fiction Double Feature"
+  notes: |-
+    We currently have:
+    - the base game
+    - Awesome Level 9000
+    - apes from Science Fiction Double Feature
   category: "Board Games: Expansions"
 
 - title: "Blood on the Clocktower"
   id: "house-12"
   url: "https://bloodontheclocktower.com/products/blood-on-the-clocktower-the-game"
   image: "https://bloodontheclocktower.com/cdn/shop/files/Toprow.jpg?v=1688887898&width=246"
-  notes: "Megan especially likes this game"
+  notes: |-
+    Megan especially likes this game
   category: "Board Games"
 
 - title: "Dominion 2nd Edition"
   id: "house-13"
   url: "https://www.amazon.com/dp/B01LYLIS2U?lv=shuf&hvlocphy=66584&psc=1&hvnetw=o&hvadid=80058400530621&hvbmt=be&hvlocint=&hvdev=c&hvocijid=5412888782431520906-B01LYLIS2U-&hvqmt=e&hvexpln=0&hvtargid=pla-4583657879817333&channelId=69&plpRedirect=mhFallback"
   image: "https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/81Ma5Q1PyGL._AC_SL1500_.jpg"
-  notes: ""
+  notes: |-
+    
   category: "Board Games"
 
-# - title: ""
-#   id: "house-14"
-#   url: ""
-#   image: ""
-#   notes: ""
-#   category: ""
+- title: "Root Expansions"
+  id: "house-14"
+  url: "https://ledergames.com/collections/full-catalog/root"
+  image: "https://ledergames.com/cdn/shop/products/ROOT_Factions_TeamPhoto.png?crop=center&height=1024&v=1614138544&width=1024"
+  notes: |-
+    We currently have:
+    - Marauder Expansion
+    - Marauder Hirelings Pack
+    - Underworld Expansion
+    - Underworld Hirelings Pack
+  category: "Board Games: Expansions"
 
 # - title: ""
 #   id: "house-15"
 #   url: ""
 #   image: ""
-#   notes: ""
+#   notes: |-
+#  
 #   category: ""
 
 # - title: ""
 #   id: "house-16"
 #   url: ""
 #   image: ""
-#   notes: ""
+#   notes: |-
+#  
 #   category: ""
