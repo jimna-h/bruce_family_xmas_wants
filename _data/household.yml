@@ -71,35 +71,35 @@
     One of the expansions for this game has otters :)
   category: "Board Games"
 
-- title: "Star Realms: Crisis"
+- title: "Root Expansions"
   id: "house-8"
+  url: "https://ledergames.com/collections/full-catalog/root"
+  image: "https://ledergames.com/cdn/shop/products/ROOT_Factions_TeamPhoto.png?crop=center&height=1024&v=1614138544&width=1024"
+  notes: |-
+    We currently have:
+    - Marauder Expansion
+    - Marauder Hirelings Pack
+    - Underworld Expansion
+    - Underworld Hirelings Pack
+  category: "Board Games: Expansions"
+
+- title: "Star Realms Expansions"
+  id: "house-9"
   url: "https://www.amazon.com/Wise-Wizard-Games-Realms-Bundle/dp/B0B8JWKXKM/ref=sr_1_1?sr=8-1"
   image: "https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/61Y59FJdhzL._AC_SL1000_.jpg"
   notes: |-
-    
-  category: "Board Games: Expansions"
-
-- title: "Star Realms: Command Decks"
-  id: "house-9"
-  url: "https://www.amazon.com/Star-Realms-Bundle-Complete-Command/dp/B08KPLPLDF"
-  image: "https://m.media-amazon.com/images/I/71rQ-HYfR3L._AC_AIweblab1392912,T3_FMavif_SF1018.5,1018.5_PQ65_.jpg?aicid=detailPage-mediaBlock"
-  notes: |-
-    This link also has the United expansions
-  category: "Board Games: Expansions"
-
-- title: "Other Star Realms Expansions"
-  id: "house-10"
-  url: "https://www.starrealms.com/sets-and-expansions"
-  image: "https://www.starrealms.com/images/content/cards_on_table.webp"
-  notes: |-
-     We currently have:
+    We currently have:
      - the base game
      - Frontiers
-     - Colony Wars"
+     - Colony Wars
+    
+    First Priorities:
+      - Command decks
+      - Crisis
   category: "Board Games: Expansions"
 
 - title: "Smash Up Expansions"
-  id: "house-11"
+  id: "house-10"
   url: "https://www.alderac.com/smash-up/"
   image: "https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/61bWBo-3IxL._AC_SL1000_.jpg"
   notes: |-
@@ -110,7 +110,7 @@
   category: "Board Games: Expansions"
 
 - title: "Blood on the Clocktower"
-  id: "house-12"
+  id: "house-11"
   url: "https://bloodontheclocktower.com/products/blood-on-the-clocktower-the-game"
   image: "https://bloodontheclocktower.com/cdn/shop/files/Toprow.jpg?v=1688887898&width=246"
   notes: |-
@@ -118,24 +118,12 @@
   category: "Board Games"
 
 - title: "Dominion 2nd Edition"
-  id: "house-13"
+  id: "house-12"
   url: "https://www.amazon.com/dp/B01LYLIS2U?lv=shuf&hvlocphy=66584&psc=1&hvnetw=o&hvadid=80058400530621&hvbmt=be&hvlocint=&hvdev=c&hvocijid=5412888782431520906-B01LYLIS2U-&hvqmt=e&hvexpln=0&hvtargid=pla-4583657879817333&channelId=69&plpRedirect=mhFallback"
   image: "https://m.media-amazon.com/images/W/BW_MEDIAX_AVIF_MEASUREMENT_1306696-T4/images/I/81Ma5Q1PyGL._AC_SL1500_.jpg"
   notes: |-
     
   category: "Board Games"
-
-- title: "Root Expansions"
-  id: "house-14"
-  url: "https://ledergames.com/collections/full-catalog/root"
-  image: "https://ledergames.com/cdn/shop/products/ROOT_Factions_TeamPhoto.png?crop=center&height=1024&v=1614138544&width=1024"
-  notes: |-
-    We currently have:
-    - Marauder Expansion
-    - Marauder Hirelings Pack
-    - Underworld Expansion
-    - Underworld Hirelings Pack
-  category: "Board Games: Expansions"
 
 # - title: ""
 #   id: "house-15"
