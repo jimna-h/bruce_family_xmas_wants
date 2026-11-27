@@ -42,7 +42,7 @@
     <div id="list-household" class="wishlist-section" style="display: none;">
       {% assign categories = site.data.household | group_by_exp: "item", "item.category | default: 'misc.'" %}
       {% for category in categories %}
-      <details class="category" open>
+      <details class="category">
         <summary>{{ category.name }}</summary>
         <div class="wishlist-grid">
         {% for item in category.items %}
@@ -81,7 +81,7 @@
     <div id="list-james" class="wishlist-section" style="display: none;">
       {% assign categories = site.data.james | group_by_exp: "item", "item.category | default: 'misc.'" %}
       {% for category in categories %}
-      <details class="category" open>
+      <details class="category">
         <summary>{{ category.name }}</summary>
         <div class="wishlist-grid">
         {% for item in category.items %}
@@ -120,7 +120,7 @@
     <div id="list-megan" class="wishlist-section" style="display: none;">
       {% assign categories = site.data.megan | group_by_exp: "item", "item.category | default: 'misc.'" %}
       {% for category in categories %}
-      <details class="category" open>
+      <details class="category">
         <summary>{{ category.name }}</summary>
         <div class="wishlist-grid">
         {% for item in category.items %}
@@ -159,7 +159,7 @@
     <div id="list-jemma" class="wishlist-section" style="display: none;">
       {% assign categories = site.data.jemma | group_by_exp: "item", "item.category | default: 'misc.'" %}
       {% for category in categories %}
-      <details class="category" open>
+      <details class="category">
         <summary>{{ category.name }}</summary>
         <div class="wishlist-grid">
         {% for item in category.items %}
@@ -199,7 +199,7 @@
     <div id="list-mabel" class="wishlist-section" style="display: none;">
       {% assign categories = site.data.mabel | group_by_exp: "item", "item.category | default: 'misc.'" %}
       {% for category in categories %}
-      <details class="category" open>
+      <details class="category">
         <summary>{{ category.name }}</summary>
         <div class="wishlist-grid">
         {% for item in category.items %}
